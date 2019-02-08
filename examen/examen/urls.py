@@ -3,8 +3,8 @@ from django.urls import path
 from examenapp import views
 from django.contrib.auth import views as auth_views
 
-
-#Password administrador123
+# User admin
+# Password administrador123
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -13,5 +13,8 @@ urlpatterns = [
     # {'template_name': 'nflp/sign_in', name="nflp-sign-in"}),
     path('NFLP/jugadores/', views.players, name="players"),
     path('NFLP/jugadores/agregar/', views.add_player, name="add-player"),
+    path('NFLP/equipos/', views.teams, name="teams"),
+    path('NFLP/equipos/agregar', views.add_team, name="add-team"),
+
 
 ]
