@@ -7,28 +7,24 @@
   </head>
   <body>
     <h1>National League Football Parra</h1>
-    <p>Lista de Jugadores</p>
+    <p>Lista de Estadios</p>
     <div class="form-group" style="width:30vw">
-      {% for team in teams_list %}
+      {% for stadium in stadium_list %}
       <table style="margin-left:3em" class="table table-dark">
         <tr>
           <th>Nombre</th>
-          <th>Ganados</th>
-          <th>Perdidos</th>
-          <th>Empates</th>
+          <th>Equipo</th>
         </tr>
         <tr>
 
-          <td>{{ team.city }}</td>
-          <td>{{ team.wins }}</td>
-          <td>{{ team.losses }}</td>
-          <td>{{ team.draws }}</td>
+          <td>{{ stadium.name }}</td>
+          <td>{{ stadium.city }}</td>
         </tr>
 
       </table>
       {% endfor %}
     </div>
-    <a href="{% url 'add-team' %}" class="btn btn-success">Agregar Equipo</a>
+    <a href="{% url 'add-stadium' %}" class="btn btn-success">Agregar Estadio</a>
   </body>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>

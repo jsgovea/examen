@@ -31,6 +31,15 @@ class Player(models.Model):
     def __str__(self):
         return self.name
 
+class Stadium(models.Model):
+    # link = models.ForeignKey('Team', on_delete="CASCADE")
+    name = models.CharField(max_length=50, verbose_name="Nombre")
+    capacity = models.IntegerField(verbose_name="Capacidad")
+    city = models.CharField(max_length=50, verbose_name="Ciudad")
+
+    def __str__(self):
+        return self.name
+
 
 
 # STATUS_CHOICES = (

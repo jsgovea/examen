@@ -8,6 +8,22 @@
   <body>
     <h1>National League Football Parra</h1>
     <p>Lista de jugadores</p>
+    <div class="form-group" style="width:30vw">
+      {% for player in player_list %}
+      <table style="margin-left:3em" class="table table-dark">
+        <tr>
+          <th>Nombre</th>
+          <th>Equipo</th>
+        </tr>
+        <tr>
+
+          <td>{{ player.name }}</td>
+          <td>{{ player.team }}</td>
+        </tr>
+
+      </table>
+      {% endfor %}
+    </div>
     <a href="{% url 'add-player' %}" class="btn btn-success">Agregar jugador</a>
   </body>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

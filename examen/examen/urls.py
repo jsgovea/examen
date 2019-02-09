@@ -15,6 +15,8 @@ urlpatterns = [
     path('NFLP/jugadores/agregar/', views.add_player, name="add-player"),
     path('NFLP/equipos/', views.teams, name="teams"),
     path('NFLP/equipos/agregar', views.add_team, name="add-team"),
+    path('NFLP/estadios/', views.stadiums, name="stadiums"),
+    path('NFLP/estadios/agregar', views.add_stadium, name="add-stadium")
 
 
 ]
