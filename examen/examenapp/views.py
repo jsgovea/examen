@@ -68,3 +68,7 @@ def add_stadium(request):
     return render(request, 'add_stadium.html', {
     "form": form
     })
+
+
+def test(request, player_id):
+    player = Team.objects.get(pk = author_id)
